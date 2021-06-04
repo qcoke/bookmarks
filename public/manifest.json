@@ -1,25 +1,22 @@
 {
-  "short_name": "React App",
   "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
+  "version": "1.0",
+  "description": "描述",
+  "manifest_version": 2,
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "content_security_policy":"script-src 'self' 'sha256-5As4+3YpY62+l38PsxCEkjB1R4YtyktBtRScTJ3fyLU=' https://apis.google.com; object-src 'self'",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "书签管理插件",
+    "default_icon": "icons.png",
+    "persistent": false
+  },
+  "permissions":[
+    "webRequest",
+    "bookmarks",
+    "tabs",
+    "webRequest",
+    "storage"
+  ]
 }
